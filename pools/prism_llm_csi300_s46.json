@@ -1,0 +1,1081 @@
+{
+ "exprs": [
+  "Div(Sub($close,Mean($close,10d)),Add(Std($close,10d),0.01))",
+  "Div(Sub($close,Min($low,5d)),Add(Sub(Max($high,5d),Min($low,5d)),0.01))",
+  "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Std($close,20d),0.01))",
+  "Div(Sub($close,EMA($close,10d)),Add(Std($close,10d),0.01))",
+  "Div(Sub(Max($high,20d),$close),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+  "Div(Sub($close,Med($close,10d)),Add(Std($close,10d),0.01))",
+  "Div(Sub(Mean($close,2d),Mean($close,40d)),Add(Std($close,40d),0.01))",
+  "Log(Div(Add($close,1.0),Add(Mean($close,10d),1.0)))",
+  "Div(Sub($high,$low),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+  "Div(Std(Log(Div($high,$low)),10d),Add(Std(Log(Div($high,$low)),40d),0.001))",
+  "Log(Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+  "Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),20d),0.001))",
+  "Sub(Mean(Log(Div($high,$low)),10d),Mean(Log(Div($high,$low)),40d))",
+  "Div(Std(Log(Div($high,$low)),20d),Add(Std(Log(Div($high,$low)),10d),0.001))",
+  "Sub(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),2.0))",
+  "Div(Mad(Log($close),10d),Add(Mad(Log($close),40d),0.001))",
+  "Add(Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),5.0),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),20.0))",
+  "Sub(Mean(Log(Div($high,$low)),5d),Mean(Log(Div($high,$low)),20d))",
+  "Div(Log(Add(Mul($vwap,$volume),1.0)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Sub(Log(Add(Mul($vwap,$volume),1.0)),EMA(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+  "Div(Mean($volume,5d),Add(Mean($volume,20d),1.0))",
+  "Log(Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),0.0001))",
+  "Div(Sub(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),10d)),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d))",
+  "Div(Mean($volume,10d),Add(Mean($volume,40d),1.0))",
+  "Add(Div(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),1.0)",
+  "Corr(Log(Add(Mul($vwap,$volume),1.0)),$close,20d)",
+  "Div(Mad(Log(Add(Mul($vwap,$volume),1.0)),20d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+  "Corr($close,Log(Add($volume,1.0)),10d)",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div($volume,Add(Mean($volume,10d),1.0)),20d)",
+  "Corr(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),Log(Add($volume,1.0)),20d)",
+  "Corr(Div(Sub($high,$close),Add(Sub($high,$low),0.01)),Log(Add(Mul($volume,$close),1.0)),10d)",
+  "Mean(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),5d)",
+  "Div(Cov($close,Log(Add(Mul($volume,$close),1.0)),20d),Add(Std($close,20d),1.0))",
+  "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div($volume,Add(Mean($volume,5d),1.0)),10d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div($volume,Add(Mean($volume,5d),1.0)),20d)",
+  "Div(Sub($close,Ref($close,20d)),Add(Div($volume,Mean($volume,20d)),1.0))",
+  "Mul(Sub(Log(Div($close,$open)),Mean(Log(Div($close,$open)),5d)),Div($vwap,$low))",
+  "Corr(Log(Div($open,Ref($close,1d))),Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),20d),1.0)),10d)",
+  "Mean(Div(Sub($high,$low),Add($open,$close)),20d)",
+  "Div(Sub(Log(Div($close,$open)),Mean(Log(Div($close,$open)),10d)),Add(Std(Log(Div($close,$open)),10d),1.0))",
+  "Corr(Mul(Log(Div($open,Ref($close,1d))),$volume),Log(Add(Mul($vwap,$volume),1.0)),20d)",
+  "Sub(Div(Log(Div($vwap,$high)),2.0),Div(Log(Div($vwap,$low)),2.0))",
+  "Div(Sub(Log(Div($close,$open)),Log(Div(Ref($close,1d),Ref($open,1d)))),Add(Std($close,10d),1.0))",
+  "Div(Sub($close,Mean($close,5d)),Add(Std($close,5d),0.01))",
+  "Div(Sub($close,Mean($close,20d)),Add(Std($close,10d),0.01))",
+  "Div(Sub($close,EMA($close,10d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+  "Div(Sub(Mean($close,5d),Mean($close,40d)),Add(Std($close,40d),0.01))",
+  "Div(Sub(Mean($close,20d),Mean($close,40d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+  "Div(Sub($close,WMA($close,10d)),Add(Std($close,10d),0.01))",
+  "Div(Sub(Mean($close,10d),Mean($close,20d)),Add(Std($close,20d),0.01))",
+  "Div(Sub($close,Med($close,20d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+  "Div(Sub($close,Mean($close,5d)),Add(Sub(Max($high,5d),Min($low,5d)),0.01))",
+  "Log(Div(Add($close,1.0),Add(Mean($close,20d),1.0)))",
+  "Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),40d),0.001))",
+  "Sub(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),2.0))",
+  "Add(Div(Mad(Log(Div($high,$low)),5d),5.0),Div(Mad(Log(Div($high,$low)),20d),20.0))",
+  "Mean(Log(Add(Div($high,$close),Div($low,$close))),10d)",
+  "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+  "Add(Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),5.0),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),40.0))",
+  "Div(Std(Log(Div($high,$low)),10d),Add(Std(Log(Div($high,$low)),20d),0.001))",
+  "Sub(Mean(Log(Div($high,$low)),5d),Mean(Log(Div($high,$low)),40d))",
+  "Div(Std(Log($close),10d),Add(Std(Log($close),20d),0.001))",
+  "Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0))",
+  "Corr(Log(Add(Mul($vwap,$volume),1.0)),Log(Add(Mul($close,$volume),1.0)),20d)",
+  "Div(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),5d),Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d))",
+  "Add(Div(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Div(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d)))",
+  "Sub(Mad(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+  "Div(Std(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Std(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Add(Div(Mean($volume,5d),Add(Mean($volume,20d),1.0)),Div(Mean($volume,10d),Add(Mean($volume,40d),1.0)))",
+  "Div(Sub(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),5d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Corr(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),Log(Add(Mul($vwap,$volume),1.0)),20d)",
+  "Div(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),20d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),10d),1.0)),10d)",
+  "Div(Cov(Div(Sub($high,$low),Add($high,$low)),Log(Add($volume,1.0)),20d),Add(Std(Div(Sub($high,$low),Add($high,$low)),20d),1.0))",
+  "Mean(Div(Sub(Mul($volume,$close),Ref(Mul($volume,$close),1d)),Add(Ref(Mul($volume,$close),1d),1.0)),5d)",
+  "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div($volume,Add(Mean(Div($volume,Mean($volume,5d)),5d),1.0)),20d)",
+  "Div(Cov(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),Log(Add($volume,1.0)),10d),Add(Std(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),10d),1.0))",
+  "Corr(Div(Sub($high,$close),Add($high,$low)),Div($volume,Add(Mean($volume,20d),1.0)),40d)",
+  "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),10d)",
+  "Div(Sub(Mean(Div($volume,Add(Mean($volume,10d),1.0)),10d),Mean(Div($volume,Add(Mean($volume,20d),1.0)),20d)),Add(Mean(Div($volume,Add(Mean($volume,20d),1.0)),20d),1.0))",
+  "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div($volume,Add(Mean(Div($volume,Mean($volume,10d)),10d),1.0)),20d)",
+  "Div(Sub(Log(Div($close,$open)),Log(Div(Ref($close,1d),Ref($open,1d)))),Add(Std(Mul($vwap,$volume),10d),1.0))",
+  "Corr(Log(Div($vwap,$high)),Log(Div($vwap,$low)),20d)",
+  "Div(Mul(Log(Div($high,$low)),2.0),Add(Std(Log(Div($high,$low)),10d),1.0))",
+  "Mean(Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),20d)",
+  "Sub(Log(Div($vwap,$high)),Log(Div($vwap,$low)))",
+  "Corr(Log(Div($close,$open)),Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),10d)",
+  "Div(Sub(Mean(Log(Div($close,$open)),5d),Mean(Log(Div($close,$open)),20d)),Add(Std(Log(Div($close,$open)),20d),1.0))",
+  "Div(Sub($close,Mean($close,10d)),Add(Std($close,20d),0.01))",
+  "Div(Sub(Max($high,10d),Mean($close,20d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+  "Div(Sub(Mean($high,5d),Mean($low,5d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+  "Div(Sub(EMA($close,10d),EMA($close,20d)),Add(Std($close,20d),0.01))",
+  "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Std($close,40d),0.01))",
+  "Div(Sub($close,WMA($close,20d)),Add(Std($close,40d),0.01))",
+  "Div(Sub(Max($high,20d),Mean($high,20d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+  "Div(Sub(Mean($close,2d),Mean($close,10d)),Add(Std($close,40d),0.01))",
+  "Div(Sub($close,Med($close,10d)),Add(Std($close,20d),0.01))",
+  "Div(Sub(Max($high,5d),Mean($close,5d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+  "Div(Sub(Mean($close,10d),Mean($close,40d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+  "Sub(Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),40d),0.001)),Div(Std(Log(Div($high,$low)),20d),Add(Std(Log(Div($high,$low)),40d),0.001)))",
+  "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+  "Div(Mad(Log(Div($high,$low)),10d),Add(Mad(Log(Div($high,$low)),40d),0.001))",
+  "Sub(Mean(Log(Div($high,$low)),10d),Mean(Log(Div($high,$low)),20d))",
+  "Sub(Div(Std(Log(Div($high,$low)),10d),Add(Std(Log(Div($high,$low)),20d),0.001)),Div(Std(Log(Div($high,$low)),20d),Add(Std(Log(Div($high,$low)),40d),0.001)))",
+  "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+  "Div(Mad(Log(Div($high,$low)),5d),Add(Mad(Log(Div($high,$low)),40d),0.001))",
+  "Sub(Div(Std(Log(Div($high,$low)),10d),10.0),Div(Std(Log(Div($high,$low)),40d),40.0))",
+  "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+  "Div(Log(Add(Mul($vwap,$volume),1.0)),Add(Max(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0))",
+  "Sub(EMA(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d))",
+  "Div(Max(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Add(Div(Mad(Log(Add(Mul($vwap,$volume),1.0)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),10d)),1.0)",
+  "Div(Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),5d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0))",
+  "Sub(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),5d),Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d))",
+  "Div(Log(Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),0.0001)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d)))",
+  "Div(Sub(Mad(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Add(Max(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+  "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),20d)",
+  "Corr(Div(Sub($high,$close),Add($high,$low)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),10d),1.0)),20d)",
+  "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),20d)",
+  "Mean(Div(Sub(Mul($volume,$close),Ref(Mul($volume,$close),1d)),Add(Ref(Mul($volume,$close),1d),1.0)),10d)",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+  "Div(Cov($vwap,Log(Add(Mul($volume,$close),1.0)),10d),Add(Std($vwap,10d),1.0))",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),20d),1.0)),10d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),20d),1.0)),10d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),20d)",
+  "Mean(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),20d)",
+  "Mul(Mean(Log(Div($high,$low)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+  "Div(Sub(Mean($high,5d),Mean($low,10d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+  "Div(Sub(Mean($close,2d),WMA($close,10d)),Add(Std($close,40d),0.01))",
+  "Div(Sub(EMA($close,5d),EMA($close,20d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+  "Div(Sub(Max($high,10d),Mean($close,20d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+  "Div(Sub(Mean($high,5d),Mean($low,5d)),Add(Std($close,20d),0.01))",
+  "Div(Sub($close,WMA($close,20d)),Add(Std($close,10d),0.01))",
+  "Div(Sub($high,Min($low,20d)),Add(Sub(Max($high,20d),Mean($close,20d)),0.01))",
+  "Div(Sub(Mean($close,10d),Mean($close,5d)),Add(Std($close,10d),0.01))",
+  "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+  "Div(Sub($close,Mean($close,5d)),Add(Std($close,10d),0.01))",
+  "Div(Sub($high,Mean($close,5d)),Add(Std($high,10d),0.01))",
+  "Div(Mad(Log(Div($high,$low)),10d),Add(Mad(Log(Div($high,$low)),20d),0.001))",
+  "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+  "Div(Mad(Log(Div($high,$low)),5d),Add(Mad(Log(Div($high,$low)),20d),0.001))",
+  "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),0.001))",
+  "Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),10d),0.001))",
+  "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+  "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),0.001))",
+  "Div(Mad(Log(Div($high,$low)),20d),Add(Mad(Log(Div($high,$low)),40d),0.001))",
+  "Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0)))",
+  "Corr(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),EMA(Log(Add(Mul($vwap,$volume),1.0)),20d),20d)",
+  "Sub(EMA(Log(Add(Mul($vwap,$volume),1.0)),20d),Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0)))",
+  "Div(Mad(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d)))",
+  "Add(Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0)),Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0)))",
+  "Div(Log(Add(Max(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),0.0001)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0))",
+  "Sub(Div(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d))",
+  "Div(Sub(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),10d),Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0))",
+  "Div(Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),Mean(Log(Add(Mul($vwap,$volume),1.0)),10d)))",
+  "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$high),Add(Mean(Mul($volume,$high),10d),1.0)),20d)",
+  "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),40d)",
+  "Corr(Div(Sub($high,Ref($high,5d)),Ref($high,5d)),Div($volume,Add(Mean($volume,10d),1.0)),20d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$low),Add(Mean(Mul($volume,$low),10d),1.0)),20d)",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),Add(Mean(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),10d),1.0)),20d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div($volume,Add(Mean($volume,5d),1.0)),10d)",
+  "Corr(Div(Sub($close,Ref($close,10d)),Ref($close,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Log(Add(Mul($volume,$close),1.0)),Add(Mean(Log(Add(Mul($volume,$close),1.0)),10d),1.0)),20d)",
+  "Corr(Div(Sub($high,Ref($high,1d)),Ref($high,1d)),Div(Mul($volume,$low),Add(Mean(Mul($volume,$low),5d),1.0)),10d)",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),Add(Mean(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),10d),1.0)),10d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Mul($volume,$high),Add(Mean(Mul($volume,$high),5d),1.0)),20d)",
+  "Corr(Div(Sub($close,Ref($close,10d)),Ref($close,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),10d)",
+  "Corr(Log(Div($open,Ref($close,1d))),Log(Div($close,$open)),20d)",
+  "Mean(Mul(Log(Div($high,$low)),Div($vwap,$high)),10d)",
+  "Sub(Mean(Log(Div($vwap,$low)),20d),Mean(Log(Div($vwap,$high)),20d))",
+  "Corr(Div($vwap,$high),Div($vwap,$low),10d)",
+  "Mul(Div(Log(Div($close,$open)),2.0),Mean(Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),20d))",
+  "Mean(Div(Log(Div($open,Ref($close,1d))),Add(Std(Log(Div($open,Ref($close,1d))),10d),1.0)),20d)",
+  "Corr(Log(Div($vwap,$high)),Log(Div($vwap,$low)),10d)",
+  "Mean(Mul(Log(Div($close,$open)),Div($volume,Add(Mean($volume,20d),1.0))),10d)",
+  "Div(Sub(Mean(Log(Div($vwap,$high)),10d),Mean(Log(Div($vwap,$low)),10d)),Add(Std(Div($vwap,$high),10d),1.0))",
+  "Corr(Mul(Log(Div($vwap,$high)),2.0),Log(Div($vwap,$low)),20d)",
+  "Div(Sub(Max($high,5d),Mean($close,10d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+  "Div(Sub(EMA($close,10d),WMA($close,20d)),Add(Std($close,40d),0.01))",
+  "Div(Sub(Mean($high,5d),Mean($low,10d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+  "Div(Sub(Max($high,10d),Mean($close,20d)),Add(Std($close,20d),0.01))",
+  "Div(Sub(Mean($close,5d),Mean($close,40d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+  "Div(Sub(EMA($high,5d),Mean($low,20d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+  "Div(Sub($close,EMA($close,20d)),Add(Std($close,10d),0.01))",
+  "Div(Sub(Mean($high,2d),Mean($low,20d)),Add(Sub(Max($high,10d),Mean($close,10d)),0.01))",
+  "Div(Sub(EMA($high,10d),Mean($low,5d)),Add(Std($close,20d),0.01))",
+  "Div(Sub($high,Mean($close,5d)),Add(Sub(Max($high,20d),Mean($low,10d)),0.01))",
+  "Div(Sub(Max($high,5d),Mean($close,40d)),Add(Std($close,10d),0.01))",
+  "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+  "Div(Mad(Log(Div($high,$low)),5d),Add(Mad(Log(Div($high,$low)),10d),0.001))",
+  "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+  "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+  "Corr(Div(Sub($high,Ref($high,5d)),Ref($high,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+  "Corr(Div(Sub($low,Ref($low,10d)),Ref($low,10d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),20d),1.0)),40d)",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),40d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,10d)),Ref($vwap,10d)),Div(Mul($volume,$high),Add(Mean(Mul($volume,$high),20d),1.0)),40d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),40d)",
+  "Corr(Div(Sub($close,Ref($close,10d)),Ref($close,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),20d),1.0)),40d)",
+  "Corr(Div(Sub($low,Ref($low,5d)),Ref($low,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+  "Corr(Div(Sub($vwap,Ref($vwap,10d)),Ref($vwap,10d)),Div(Mul($volume,$low),Add(Mean(Mul($volume,$low),20d),1.0)),40d)",
+  "Corr(Div(Sub($high,Ref($high,10d)),Ref($high,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),20d),1.0)),40d)",
+  "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),20d)",
+  "Corr(Mul(Log(Div($open,Ref($close,1d))),2.0),Log(Div($close,$open)),20d)",
+  "Mean(Div(Log(Div($vwap,$high)),Add(Std(Div($vwap,$high),10d),1.0)),20d)",
+  "Corr(Div($vwap,$low),Log(Div($open,Ref($close,1d))),10d)",
+  "Corr(Sub(Log(Div($vwap,$high)),Log(Div($vwap,$low))),Log(Div($open,Ref($close,1d))),20d)",
+  "Div(Mean(Log(Div($vwap,$high)),10d),Add(Mean(Log(Div($vwap,$low)),10d),1.0))",
+  "Mean(Div(Log(Div($close,$open)),Add(Std(Log(Div($close,$open)),10d),1.0)),20d)",
+  "Corr(Mul(Div($vwap,$high),2.0),Div($vwap,$low),20d)",
+  "Corr(Log(Div($vwap,$high)),Sub(Log(Div($close,$open)),Log(Div(Ref($close,1d),Ref($open,1d)))),10d)",
+  "Mean(Div(Mul(Log(Div($vwap,$high)),2.0),Add(Mean(Log(Div($vwap,$high)),10d),1.0)),20d)",
+  "Corr(Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),Log(Div($open,Ref($close,1d))),20d)"
+ ],
+ "meta": [
+  {
+   "expr": "Div(Sub($close,Mean($close,10d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,Min($low,5d)),Add(Sub(Max($high,5d),Min($low,5d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,EMA($close,10d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Max($high,20d),$close),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,Med($close,10d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,2d),Mean($close,40d)),Add(Std($close,40d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Log(Div(Add($close,1.0),Add(Mean($close,10d),1.0)))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($high,$low),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Std(Log(Div($high,$low)),10d),Add(Std(Log(Div($high,$low)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Log(Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Mean(Log(Div($high,$low)),10d),Mean(Log(Div($high,$low)),40d))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Log(Div($high,$low)),20d),Add(Std(Log(Div($high,$low)),10d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),2.0))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Log($close),10d),Add(Mad(Log($close),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Add(Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),5.0),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),20.0))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Mean(Log(Div($high,$low)),5d),Mean(Log(Div($high,$low)),20d))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Log(Add(Mul($vwap,$volume),1.0)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Sub(Log(Add(Mul($vwap,$volume),1.0)),EMA(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Mean($volume,5d),Add(Mean($volume,20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Log(Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),0.0001))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Sub(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),10d)),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Mean($volume,10d),Add(Mean($volume,40d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Add(Div(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),1.0)",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr(Log(Add(Mul($vwap,$volume),1.0)),$close,20d)",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Mad(Log(Add(Mul($vwap,$volume),1.0)),20d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr($close,Log(Add($volume,1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div($volume,Add(Mean($volume,10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),Log(Add($volume,1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($high,$close),Add(Sub($high,$low),0.01)),Log(Add(Mul($volume,$close),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Mean(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),5d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Div(Cov($close,Log(Add(Mul($volume,$close),1.0)),20d),Add(Std($close,20d),1.0))",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div($volume,Add(Mean($volume,5d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div($volume,Add(Mean($volume,5d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Div(Sub($close,Ref($close,20d)),Add(Div($volume,Mean($volume,20d)),1.0))",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Mul(Sub(Log(Div($close,$open)),Mean(Log(Div($close,$open)),5d)),Div($vwap,$low))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Log(Div($open,Ref($close,1d))),Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),20d),1.0)),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Div(Sub($high,$low),Add($open,$close)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub(Log(Div($close,$open)),Mean(Log(Div($close,$open)),10d)),Add(Std(Log(Div($close,$open)),10d),1.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Mul(Log(Div($open,Ref($close,1d))),$volume),Log(Add(Mul($vwap,$volume),1.0)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Sub(Div(Log(Div($vwap,$high)),2.0),Div(Log(Div($vwap,$low)),2.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub(Log(Div($close,$open)),Log(Div(Ref($close,1d),Ref($open,1d)))),Add(Std($close,10d),1.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub($close,Mean($close,5d)),Add(Std($close,5d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,Mean($close,20d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,EMA($close,10d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,5d),Mean($close,40d)),Add(Std($close,40d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,20d),Mean($close,40d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,WMA($close,10d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,10d),Mean($close,20d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,Med($close,20d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,Mean($close,5d)),Add(Sub(Max($high,5d),Min($low,5d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Log(Div(Add($close,1.0),Add(Mean($close,20d),1.0)))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),2.0))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Add(Div(Mad(Log(Div($high,$low)),5d),5.0),Div(Mad(Log(Div($high,$low)),20d),20.0))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Mean(Log(Add(Div($high,$close),Div($low,$close))),10d)",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Add(Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),5.0),Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),40.0))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Log(Div($high,$low)),10d),Add(Std(Log(Div($high,$low)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Mean(Log(Div($high,$low)),5d),Mean(Log(Div($high,$low)),40d))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Log($close),10d),Add(Std(Log($close),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr(Log(Add(Mul($vwap,$volume),1.0)),Log(Add(Mul($close,$volume),1.0)),20d)",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),5d),Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Add(Div(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Div(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Sub(Mad(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Std(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Std(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Add(Div(Mean($volume,5d),Add(Mean($volume,20d),1.0)),Div(Mean($volume,10d),Add(Mean($volume,40d),1.0)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Sub(Log(Add(Mul($vwap,$volume),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),5d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),Log(Add(Mul($vwap,$volume),1.0)),20d)",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),10d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Div(Cov(Div(Sub($high,$low),Add($high,$low)),Log(Add($volume,1.0)),20d),Add(Std(Div(Sub($high,$low),Add($high,$low)),20d),1.0))",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Mean(Div(Sub(Mul($volume,$close),Ref(Mul($volume,$close),1d)),Add(Ref(Mul($volume,$close),1d),1.0)),5d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div($volume,Add(Mean(Div($volume,Mean($volume,5d)),5d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Div(Cov(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),Log(Add($volume,1.0)),10d),Add(Std(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),10d),1.0))",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($high,$close),Add($high,$low)),Div($volume,Add(Mean($volume,20d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Div(Sub(Mean(Div($volume,Add(Mean($volume,10d),1.0)),10d),Mean(Div($volume,Add(Mean($volume,20d),1.0)),20d)),Add(Mean(Div($volume,Add(Mean($volume,20d),1.0)),20d),1.0))",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div($volume,Add(Mean(Div($volume,Mean($volume,10d)),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Div(Sub(Log(Div($close,$open)),Log(Div(Ref($close,1d),Ref($open,1d)))),Add(Std(Mul($vwap,$volume),10d),1.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Log(Div($vwap,$high)),Log(Div($vwap,$low)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Mul(Log(Div($high,$low)),2.0),Add(Std(Log(Div($high,$low)),10d),1.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Sub(Log(Div($vwap,$high)),Log(Div($vwap,$low)))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Log(Div($close,$open)),Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub(Mean(Log(Div($close,$open)),5d),Mean(Log(Div($close,$open)),20d)),Add(Std(Log(Div($close,$open)),20d),1.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub($close,Mean($close,10d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Max($high,10d),Mean($close,20d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($high,5d),Mean($low,5d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(EMA($close,10d),EMA($close,20d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Std($close,40d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,WMA($close,20d)),Add(Std($close,40d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Max($high,20d),Mean($high,20d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,2d),Mean($close,10d)),Add(Std($close,40d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,Med($close,10d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Max($high,5d),Mean($close,5d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,10d),Mean($close,40d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Sub(Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),40d),0.001)),Div(Std(Log(Div($high,$low)),20d),Add(Std(Log(Div($high,$low)),40d),0.001)))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Log(Div($high,$low)),10d),Add(Mad(Log(Div($high,$low)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Mean(Log(Div($high,$low)),10d),Mean(Log(Div($high,$low)),20d))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Div(Std(Log(Div($high,$low)),10d),Add(Std(Log(Div($high,$low)),20d),0.001)),Div(Std(Log(Div($high,$low)),20d),Add(Std(Log(Div($high,$low)),40d),0.001)))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Log(Div($high,$low)),5d),Add(Mad(Log(Div($high,$low)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Div(Std(Log(Div($high,$low)),10d),10.0),Div(Std(Log(Div($high,$low)),40d),40.0))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Log(Add(Mul($vwap,$volume),1.0)),Add(Max(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Sub(EMA(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Max(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Add(Div(Mad(Log(Add(Mul($vwap,$volume),1.0)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),10d)),1.0)",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),5d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Sub(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),5d),Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Log(Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),0.0001)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Sub(Mad(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Add(Max(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($high,$close),Add($high,$low)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Mean(Div(Sub(Mul($volume,$close),Ref(Mul($volume,$close),1d)),Add(Ref(Mul($volume,$close),1d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Div(Cov($vwap,Log(Add(Mul($volume,$close),1.0)),10d),Add(Std($vwap,10d),1.0))",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),20d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Log(Add($volume,1.0)),Add(Mean(Log(Add($volume,1.0)),20d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Mean(Div(Sub($vwap,$close),Add(Sub($high,$low),0.01)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Mul(Mean(Log(Div($high,$low)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub(Mean($high,5d),Mean($low,10d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,2d),WMA($close,10d)),Add(Std($close,40d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(EMA($close,5d),EMA($close,20d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Max($high,10d),Mean($close,20d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($high,5d),Mean($low,5d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,WMA($close,20d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($high,Min($low,20d)),Add(Sub(Max($high,20d),Mean($close,20d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,10d),Mean($close,5d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,Mean($close,5d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($high,Mean($close,5d)),Add(Std($high,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Mad(Log(Div($high,$low)),10d),Add(Mad(Log(Div($high,$low)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Log(Div($high,$low)),5d),Add(Mad(Log(Div($high,$low)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Log(Div($high,$low)),5d),Add(Std(Log(Div($high,$low)),10d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Mad(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Mad(Log(Div($high,$low)),20d),Add(Mad(Log(Div($high,$low)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),EMA(Log(Add(Mul($vwap,$volume),1.0)),20d),20d)",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Sub(EMA(Log(Add(Mul($vwap,$volume),1.0)),20d),Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Mad(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Add(Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),1.0)),Div(Mean(Log(Add(Mul($vwap,$volume),1.0)),20d),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),1.0)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Log(Add(Max(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),0.0001)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Sub(Div(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),10d),Add(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d),1.0)),Mean(Log(Add(Mul($vwap,$volume),1.0)),40d))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Sub(Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),10d),Mean(Div(Abs(Sub($close,Ref($close,1d))),Add(Mul($vwap,$volume),1.0)),20d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),1.0))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Div(Sub(Mean(Log(Add(Mul($vwap,$volume),1.0)),10d),Mean(Log(Add(Mul($vwap,$volume),1.0)),20d)),Add(Mean(Log(Add(Mul($vwap,$volume),1.0)),40d),Mean(Log(Add(Mul($vwap,$volume),1.0)),10d)))",
+   "band": "liquidity_scale"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$high),Add(Mean(Mul($volume,$high),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($high,Ref($high,5d)),Ref($high,5d)),Div($volume,Add(Mean($volume,10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$low),Add(Mean(Mul($volume,$low),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),Add(Mean(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div($volume,Add(Mean($volume,5d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,10d)),Ref($close,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Log(Add(Mul($volume,$close),1.0)),Add(Mean(Log(Add(Mul($volume,$close),1.0)),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($high,Ref($high,1d)),Ref($high,1d)),Div(Mul($volume,$low),Add(Mean(Mul($volume,$low),5d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),Add(Mean(Mul($volume,Div(Sub($vwap,$close),Add(Sub($high,$low),0.01))),10d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,1d)),Ref($vwap,1d)),Div(Mul($volume,$high),Add(Mean(Mul($volume,$high),5d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,10d)),Ref($close,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),10d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Log(Div($open,Ref($close,1d))),Log(Div($close,$open)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Mul(Log(Div($high,$low)),Div($vwap,$high)),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Sub(Mean(Log(Div($vwap,$low)),20d),Mean(Log(Div($vwap,$high)),20d))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Div($vwap,$high),Div($vwap,$low),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mul(Div(Log(Div($close,$open)),2.0),Mean(Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),20d))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Div(Log(Div($open,Ref($close,1d))),Add(Std(Log(Div($open,Ref($close,1d))),10d),1.0)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Log(Div($vwap,$high)),Log(Div($vwap,$low)),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Mul(Log(Div($close,$open)),Div($volume,Add(Mean($volume,20d),1.0))),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub(Mean(Log(Div($vwap,$high)),10d),Mean(Log(Div($vwap,$low)),10d)),Add(Std(Div($vwap,$high),10d),1.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Mul(Log(Div($vwap,$high)),2.0),Log(Div($vwap,$low)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Sub(Max($high,5d),Mean($close,10d)),Add(Sub(Max($high,20d),Min($low,20d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(EMA($close,10d),WMA($close,20d)),Add(Std($close,40d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($high,5d),Mean($low,10d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Max($high,10d),Mean($close,20d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,5d),Mean($close,40d)),Add(Sub(Max($high,40d),Min($low,40d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(EMA($high,5d),Mean($low,20d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($close,EMA($close,20d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($high,2d),Mean($low,20d)),Add(Sub(Max($high,10d),Mean($close,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(EMA($high,10d),Mean($low,5d)),Add(Std($close,20d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub($high,Mean($close,5d)),Add(Sub(Max($high,20d),Mean($low,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Max($high,5d),Mean($close,40d)),Add(Std($close,10d),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Sub(Mean($close,5d),Mean($close,20d)),Add(Sub(Max($high,10d),Min($low,10d)),0.01))",
+   "band": "reversal_trend"
+  },
+  {
+   "expr": "Div(Mad(Log(Div($high,$low)),5d),Add(Mad(Log(Div($high,$low)),10d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),5d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),40d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Div(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),10d),Add(Std(Div(Sub($close,Ref($close,1d)),Ref($close,1d)),20d),0.001))",
+   "band": "volatility_dispersion"
+  },
+  {
+   "expr": "Corr(Div(Sub($high,Ref($high,5d)),Ref($high,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($low,Ref($low,10d)),Ref($low,10d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),20d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,10d)),Ref($vwap,10d)),Div(Mul($volume,$high),Add(Mean(Mul($volume,$high),20d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,5d)),Ref($vwap,5d)),Div(Mul($volume,$close),Add(Mean(Mul($volume,$close),10d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,10d)),Ref($close,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),20d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($low,Ref($low,5d)),Ref($low,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),10d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($vwap,Ref($vwap,10d)),Ref($vwap,10d)),Div(Mul($volume,$low),Add(Mean(Mul($volume,$low),20d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($high,Ref($high,10d)),Ref($high,10d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),20d),1.0)),40d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Div(Sub($close,Ref($close,5d)),Ref($close,5d)),Div(Mul($volume,$vwap),Add(Mean(Mul($volume,$vwap),5d),1.0)),20d)",
+   "band": "price_volume_coupling"
+  },
+  {
+   "expr": "Corr(Mul(Log(Div($open,Ref($close,1d))),2.0),Log(Div($close,$open)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Div(Log(Div($vwap,$high)),Add(Std(Div($vwap,$high),10d),1.0)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Div($vwap,$low),Log(Div($open,Ref($close,1d))),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Sub(Log(Div($vwap,$high)),Log(Div($vwap,$low))),Log(Div($open,Ref($close,1d))),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Div(Mean(Log(Div($vwap,$high)),10d),Add(Mean(Log(Div($vwap,$low)),10d),1.0))",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Div(Log(Div($close,$open)),Add(Std(Log(Div($close,$open)),10d),1.0)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Mul(Div($vwap,$high),2.0),Div($vwap,$low),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Log(Div($vwap,$high)),Sub(Log(Div($close,$open)),Log(Div(Ref($close,1d),Ref($open,1d)))),10d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Mean(Div(Mul(Log(Div($vwap,$high)),2.0),Add(Mean(Log(Div($vwap,$high)),10d),1.0)),20d)",
+   "band": "intraday_cross"
+  },
+  {
+   "expr": "Corr(Div(Mul($vwap,$volume),Add(Mean(Mul($vwap,$volume),10d),1.0)),Log(Div($open,Ref($close,1d))),20d)",
+   "band": "intraday_cross"
+  }
+ ]
+}
